@@ -1,0 +1,23 @@
+<div style="margin-left: 400px;
+   margin-top: 30px;">
+    <form>
+        <input id="search"
+               style="width: 400px;height: 30px;border-radius: 8px 0px 0px 8px;border: 2px solid #aaa;border-right: none;"
+               type="text" ng-model="toSearch" placeholder="search"><button id="button"
+                style="height: 30px;width: 100;border-radius: 0px 8px 8px 0px;border: 2px solid #aaa;color: #6699cc;"
+                ng-click='getData(toSearch)'>submit
+        </button>
+    </form>
+</div>
+
+
+
+<div ng-repeat='myContent in myContents' style="margin-top: 100px; margin-bottom: 50px">
+	<h1 align="center" style="border: 2px solid green;">{{myContent.title}}</h1>
+	<div style="border: 2px solid green; border-top: none; border-bottom: 6px solid green">
+		<span ng-bind-html="myContent.body"></span>
+	</div>
+
+
+</div>
+
